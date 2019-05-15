@@ -1,0 +1,22 @@
+.set-position-reference {
+  display: inline-block;
+  background-color: transparent;
+  border: solid 1px transparent;
+  border-radius: 2px;
+  color: #666;
+  width: 24px;
+  height: 24px;
+  margin: 2px 0px;
+  padding: 0;
+  line-height: 24px;
+  text-align: center;
+}
+
+.set-position-reference.active,
+.set-position-reference:hover {
+  border-color: #666;
+}
+
+.rotate-45 {
+  transform: rotate(45deg);
+}
