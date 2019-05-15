@@ -6,6 +6,8 @@
 
 This [Camunda Modeler Plugin](https://github.com/camunda/camunda-modeler) lets you set an element's position through the properties panel.
 
+> :warning: This plugin disables the [align-to-origin feature](https://github.com/bpmn-io/align-to-origin) since it would change element positions whenever you save.
+
 ## Building
 
 Install dependencies:
