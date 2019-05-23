@@ -111,9 +111,9 @@ function positionProps(group, element) {
       }
 
       return {
-        cmd: 'shape.move',
+        cmd: 'elements.move',
         context: {
-          shape: element,
+          shapes: [ element ],
           delta:  {
             x: parseInt(x) - getPosition(element).x,
             y: 0
@@ -151,9 +151,9 @@ function positionProps(group, element) {
       }
 
       return {
-        cmd: 'shape.move',
+        cmd: 'elements.move',
         context: {
-          shape: element,
+          shapes: [ element ],
           delta:  {
             x: 0,
             y: parseInt(y) - getPosition(element).y

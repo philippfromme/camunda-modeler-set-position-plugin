@@ -242,9 +242,9 @@ function positionProps(group, element) {
       }
 
       return {
-        cmd: 'shape.move',
+        cmd: 'elements.move',
         context: {
-          shape: element,
+          shapes: [ element ],
           delta:  {
             x: parseInt(x) - getPosition(element).x,
             y: 0
@@ -282,9 +282,9 @@ function positionProps(group, element) {
       }
 
       return {
-        cmd: 'shape.move',
+        cmd: 'elements.move',
         context: {
-          shape: element,
+          shapes: [ element ],
           delta:  {
             x: 0,
             y: parseInt(y) - getPosition(element).y
@@ -355,7 +355,7 @@ function PositionPropertiesProvider(
 
     var tabs = originalGetTabs(element);
 
-    if (Object(bpmn_js_lib_util_ModelUtil__WEBPACK_IMPORTED_MODULE_2__["is"])(element, 'bpmn:FlowNode')) {
+    if (Object(bpmn_js_lib_util_ModelUtil__WEBPACK_IMPORTED_MODULE_2__["is"])(element, 'bpmn:FlowNode') || Object(bpmn_js_lib_util_ModelUtil__WEBPACK_IMPORTED_MODULE_2__["is"])(element, 'bpmn:Participant')) {
       var positionTab = {
         id: 'position',
         label: 'Position',
