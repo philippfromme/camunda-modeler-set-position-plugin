@@ -224,7 +224,7 @@ function PositionPropertiesProvider(
 
     var tabs = originalGetTabs(element);
 
-    if (is(element, 'bpmn:FlowNode')) {
+    if (is(element, 'bpmn:FlowNode') || is(element, 'bpmn:Participant')) {
       var positionTab = {
         id: 'position',
         label: 'Position',
