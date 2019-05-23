@@ -224,7 +224,7 @@ function PositionPropertiesProvider(
 
     var tabs = originalGetTabs(element);
 
-    if (is(element, 'bpmn:FlowNode') || is(element, 'bpmn:Participant')) {
+    if (!isRootElement(element) && !isConnection(element) && !is(element, 'bpmn:Lane')) {
       var positionTab = {
         id: 'position',
         label: 'Position',
@@ -253,3 +253,13 @@ export default {
   alignToOrigin: [ 'value', null ],
   propertiesProvider: [ 'type', PositionPropertiesProvider ]
 };
+
+// helpers //////////
+
+function isConnection(element) {
+  return !!element.waypoints;
+}
+
+function isRootElement(element) {
+  return !element.parent;
+}

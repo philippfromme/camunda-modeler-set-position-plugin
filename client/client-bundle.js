@@ -355,7 +355,7 @@ function PositionPropertiesProvider(
 
     var tabs = originalGetTabs(element);
 
-    if (Object(bpmn_js_lib_util_ModelUtil__WEBPACK_IMPORTED_MODULE_2__["is"])(element, 'bpmn:FlowNode') || Object(bpmn_js_lib_util_ModelUtil__WEBPACK_IMPORTED_MODULE_2__["is"])(element, 'bpmn:Participant')) {
+    if (!isRootElement(element) && !isConnection(element) && !Object(bpmn_js_lib_util_ModelUtil__WEBPACK_IMPORTED_MODULE_2__["is"])(element, 'bpmn:Lane')) {
       var positionTab = {
         id: 'position',
         label: 'Position',
@@ -385,6 +385,15 @@ PositionPropertiesProvider.$inject = [
   propertiesProvider: [ 'type', PositionPropertiesProvider ]
 });
 
+// helpers //////////
+
+function isConnection(element) {
+  return !!element.waypoints;
+}
+
+function isRootElement(element) {
+  return !element.parent;
+}
 
 /***/ }),
 
