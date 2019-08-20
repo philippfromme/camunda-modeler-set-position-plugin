@@ -24,16 +24,26 @@ import {
 } from 'min-dom';
 
 import {
+  filter,
+  forEach
+} from 'min-dash';
+
+import {
   clear as svgClear
 } from 'tiny-svg';
 
-import { translate } from 'diagram-js/lib/util/SvgTransformUtil';
+import {
+  translate
+} from 'diagram-js/lib/util/SvgTransformUtil';
 
 var reference = 'mid-mid';
 
 var dragger;
 
-var parent = null;
+var target = null;
+
+var MARKER_NEW_PARENT = 'new-parent',
+    MARKER_NOT_OK = 'drop-not-ok';
 
 function getPosition(element) {
   var references = reference.split('-'),
@@ -106,8 +116,28 @@ function getMid(x, y, width, height) {
   };
 }
 
-function getParentAtPosition(position) {
-  console.log('get parent at position', position);
+function getChildren(elements) {
+
+  // find elements that are not parent of any other elements
+  return filter(elements, function(element) {
+    return !find(elements, function(e) {
+      return e !== element && getParent(e, element);
+    });
+  });
+}
+
+function getTargetAtPosition(element, position, canvas, elementRegistry) {
+  var elements = elementRegistry.filter(function(e) {
+    return position.x >= e.x &&
+      position.x <= e.x + e.width &&
+      position.y >= e.y &&
+      position.y <= e.y + e.height &&
+      e !== element;
+  });
+
+  elements = getChildren(elements);
+
+  return elements.length ? elements.shift() : canvas.getRootElement();
 }
 
 function referenceProps(group, element, eventBus) {
@@ -155,9 +185,11 @@ function referenceProps(group, element, eventBus) {
 
 function positionEntry(element, axis, injector) {
   var canvas = injector.get('canvas'),
+      elementRegistry = injector.get('elementRegistry'),
       eventBus = injector.get('eventBus'),
       modeling = injector.get('modeling'),
-      previewSupport = injector.get('previewSupport');
+      previewSupport = injector.get('previewSupport'),
+      rules = injector.get('rules');
 
   function setPosition(value) {
     var delta = {
@@ -167,7 +199,24 @@ function positionEntry(element, axis, injector) {
 
     delta[ axis ] = value - getPosition(element)[ axis ];
 
-    modeling.moveShape(element, delta);
+    modeling.moveShape(element, delta, target);
+  }
+
+  function setMarker(element, marker) {
+    forEach([ MARKER_NEW_PARENT, MARKER_NOT_OK ], function(m) {
+  
+      if (m === marker) {
+        canvas.addMarker(element, m);
+      } else {
+        canvas.removeMarker(element, m);
+      }
+    });
+  }
+
+  function removeMarkers(element) {
+    forEach([ MARKER_NEW_PARENT, MARKER_NOT_OK ], function(m) {
+      canvas.removeMarker(element, m);
+    });
   }
 
   var $html = domify(
@@ -208,11 +257,34 @@ function positionEntry(element, axis, injector) {
 
     position[ axis ] = value;
 
+    var newTarget = getTargetAtPosition(element,
+      getMid(position.x, position.y, element.width, element.height), canvas, elementRegistry);
+
+    if (target && target !== newTarget) {
+      removeMarkers(target);
+    }
+
+    target = newTarget;
+
+    var canExecute;
+
+    if (target) {
+      var canExecute = rules.allowed('elements.move', {
+        shapes: [ element ],
+        target: target
+      });
+
+      // add marker
+      if (canExecute) {
+        setMarker(target, MARKER_NEW_PARENT);
+      } else {
+        setMarker(target, MARKER_NOT_OK);
+      }
+    }
+
     position = getTopRight(position.x, position.y, element.width, element.height);
 
     translate(dragger, position.x, position.y);
-
-    parent = getParentAtPosition(getMid(position.x, position.y, element.width, element.height));
   });
 
   function clear() {
@@ -220,7 +292,9 @@ function positionEntry(element, axis, injector) {
 
     dragger = null;
 
-    parent = null;
+    target && removeMarkers(target);
+
+    target = null;
 
     $input.value = getPosition(element)[ axis ].toString();
   }

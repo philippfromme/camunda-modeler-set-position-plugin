@@ -133,8 +133,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_fontawesome_free_solid_faDotCircle__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faDotCircle__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _template_html__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./template.html */ "./client/template.html");
 /* harmony import */ var min_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! min-dom */ "./node_modules/min-dom/dist/index.esm.js");
-/* harmony import */ var tiny_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! tiny-svg */ "./node_modules/tiny-svg/dist/index.esm.js");
-/* harmony import */ var diagram_js_lib_util_SvgTransformUtil__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! diagram-js/lib/util/SvgTransformUtil */ "./node_modules/diagram-js/lib/util/SvgTransformUtil.js");
+/* harmony import */ var min_dash__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! min-dash */ "./node_modules/min-dash/dist/index.esm.js");
+/* harmony import */ var tiny_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! tiny-svg */ "./node_modules/tiny-svg/dist/index.esm.js");
+/* harmony import */ var diagram_js_lib_util_SvgTransformUtil__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! diagram-js/lib/util/SvgTransformUtil */ "./node_modules/diagram-js/lib/util/SvgTransformUtil.js");
 
 
 
@@ -158,11 +159,16 @@ _fortawesome_fontawesome__WEBPACK_IMPORTED_MODULE_3__["default"].library.add(_fo
 
 
 
+
+
 var reference = 'mid-mid';
 
 var dragger;
 
-var parent = null;
+var target = null;
+
+var MARKER_NEW_PARENT = 'new-parent',
+    MARKER_NOT_OK = 'drop-not-ok';
 
 function getPosition(element) {
   var references = reference.split('-'),
@@ -235,8 +241,28 @@ function getMid(x, y, width, height) {
   };
 }
 
-function getParentAtPosition(position) {
-  console.log('get parent at position', position);
+function getChildren(elements) {
+
+  // find elements that are not parent of any other elements
+  return Object(min_dash__WEBPACK_IMPORTED_MODULE_11__["filter"])(elements, function(element) {
+    return !find(elements, function(e) {
+      return e !== element && getParent(e, element);
+    });
+  });
+}
+
+function getTargetAtPosition(element, position, canvas, elementRegistry) {
+  var elements = elementRegistry.filter(function(e) {
+    return position.x >= e.x &&
+      position.x <= e.x + e.width &&
+      position.y >= e.y &&
+      position.y <= e.y + e.height &&
+      e !== element;
+  });
+
+  elements = getChildren(elements);
+
+  return elements.length ? elements.shift() : canvas.getRootElement();
 }
 
 function referenceProps(group, element, eventBus) {
@@ -284,9 +310,11 @@ function referenceProps(group, element, eventBus) {
 
 function positionEntry(element, axis, injector) {
   var canvas = injector.get('canvas'),
+      elementRegistry = injector.get('elementRegistry'),
       eventBus = injector.get('eventBus'),
       modeling = injector.get('modeling'),
-      previewSupport = injector.get('previewSupport');
+      previewSupport = injector.get('previewSupport'),
+      rules = injector.get('rules');
 
   function setPosition(value) {
     var delta = {
@@ -296,7 +324,24 @@ function positionEntry(element, axis, injector) {
 
     delta[ axis ] = value - getPosition(element)[ axis ];
 
-    modeling.moveShape(element, delta);
+    modeling.moveShape(element, delta, target);
+  }
+
+  function setMarker(element, marker) {
+    Object(min_dash__WEBPACK_IMPORTED_MODULE_11__["forEach"])([ MARKER_NEW_PARENT, MARKER_NOT_OK ], function(m) {
+  
+      if (m === marker) {
+        canvas.addMarker(element, m);
+      } else {
+        canvas.removeMarker(element, m);
+      }
+    });
+  }
+
+  function removeMarkers(element) {
+    Object(min_dash__WEBPACK_IMPORTED_MODULE_11__["forEach"])([ MARKER_NEW_PARENT, MARKER_NOT_OK ], function(m) {
+      canvas.removeMarker(element, m);
+    });
   }
 
   var $html = Object(min_dom__WEBPACK_IMPORTED_MODULE_10__["domify"])(
@@ -337,19 +382,44 @@ function positionEntry(element, axis, injector) {
 
     position[ axis ] = value;
 
+    var newTarget = getTargetAtPosition(element,
+      getMid(position.x, position.y, element.width, element.height), canvas, elementRegistry);
+
+    if (target && target !== newTarget) {
+      removeMarkers(target);
+    }
+
+    target = newTarget;
+
+    var canExecute;
+
+    if (target) {
+      var canExecute = rules.allowed('elements.move', {
+        shapes: [ element ],
+        target: target
+      });
+
+      // add marker
+      if (canExecute) {
+        setMarker(target, MARKER_NEW_PARENT);
+      } else {
+        setMarker(target, MARKER_NOT_OK);
+      }
+    }
+
     position = getTopRight(position.x, position.y, element.width, element.height);
 
-    Object(diagram_js_lib_util_SvgTransformUtil__WEBPACK_IMPORTED_MODULE_12__["translate"])(dragger, position.x, position.y);
-
-    parent = getParentAtPosition(getMid(position.x, position.y, element.width, element.height));
+    Object(diagram_js_lib_util_SvgTransformUtil__WEBPACK_IMPORTED_MODULE_13__["translate"])(dragger, position.x, position.y);
   });
 
   function clear() {
-    Object(tiny_svg__WEBPACK_IMPORTED_MODULE_11__["clear"])(canvas.getLayer('set-position-preview'));
+    Object(tiny_svg__WEBPACK_IMPORTED_MODULE_12__["clear"])(canvas.getLayer('set-position-preview'));
 
     dragger = null;
 
-    parent = null;
+    target && removeMarkers(target);
+
+    target = null;
 
     $input.value = getPosition(element)[ axis ].toString();
   }
