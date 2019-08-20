@@ -5,8 +5,6 @@ import CamundaPropertiesProvider from
 
 import { is } from 'bpmn-js/lib/util/ModelUtil';
 
-import entryFactory from 'bpmn-js-properties-panel/lib/factory/EntryFactory';
-
 import fontawesome from "@fortawesome/fontawesome";
 import fasArrowDown from "@fortawesome/fontawesome-free-solid/faArrowDown";
 import fasArrowLeft from "@fortawesome/fontawesome-free-solid/faArrowLeft";
@@ -25,7 +23,17 @@ import {
   queryAll as domQueryAll
 } from 'min-dom';
 
+import {
+  clear as svgClear
+} from 'tiny-svg';
+
+import { translate } from 'diagram-js/lib/util/SvgTransformUtil';
+
 var reference = 'mid-mid';
+
+var dragger;
+
+var parent = null;
 
 function getPosition(element) {
   var references = reference.split('-'),
@@ -50,6 +58,56 @@ function getPosition(element) {
   }
 
   return position;
+}
+
+function getTopRight(x, y, width, height) {
+  var references = reference.split('-'),
+      verticalReference = references[0],
+      horizontalReference = references[1];
+
+  if (horizontalReference === 'mid') {
+    x = x - width / 2;
+  } else if (horizontalReference === 'right') {
+    x = x - width;
+  }
+
+  if (verticalReference === 'mid') {
+    y = y - height / 2;
+  } else if (verticalReference === 'bottom') {
+    y = y - height;
+  }
+  
+  return {
+    x: x,
+    y: y
+  };
+}
+
+function getMid(x, y, width, height) {
+  var references = reference.split('-'),
+      verticalReference = references[0],
+      horizontalReference = references[1];
+
+  if (horizontalReference === 'left') {
+    x = x + width / 2;
+  } else if (horizontalReference === 'right') {
+    x = x - width / 2;
+  }
+
+  if (verticalReference === 'top') {
+    y = y + height / 2;
+  } else if (verticalReference === 'bottom') {
+    y = y - height / 2;
+  }
+  
+  return {
+    x: x,
+    y: y
+  };
+}
+
+function getParentAtPosition(position) {
+  console.log('get parent at position', position);
 }
 
 function referenceProps(group, element, eventBus) {
@@ -95,89 +153,94 @@ function referenceProps(group, element, eventBus) {
   })
 }
 
-function positionProps(group, element) {
-  group.entries.push(entryFactory.validationAwareTextField({
-    id: 'x',
-    label : 'x',
-    modelProperty: 'x',
-    getProperty: function(element, node) {
-      return getPosition(element).x.toString();
-    },
-    setProperty: function(element, values, node) {
-      var x = values.x;
+function positionEntry(element, axis, injector) {
+  var canvas = injector.get('canvas'),
+      eventBus = injector.get('eventBus'),
+      modeling = injector.get('modeling'),
+      previewSupport = injector.get('previewSupport');
 
-      if (isNaN(parseInt(x))) {
-        return;
-      }
+  function setPosition(value) {
+    var delta = {
+      x: 0,
+      y: 0
+    };
 
-      return {
-        cmd: 'elements.move',
-        context: {
-          shapes: [ element ],
-          delta:  {
-            x: parseInt(x) - getPosition(element).x,
-            y: 0
-          },
-          hints: {}
-        }
-      };
-    },
-    validate: function(element, values) {
-      var x = values.x;
+    delta[ axis ] = value - getPosition(element)[ axis ];
 
-      return isNaN(parseInt(x)) ? { x: 'Must be an integer.' } : {};
-    },
-    buttonShow: {
-      method: function() {
-        
-        // hide clear button
-        return false;
-      }
+    modeling.moveShape(element, delta);
+  }
+
+  var $html = domify(
+    '<label>' + axis + '</label>' +
+    '<div class="bpp-field-wrapper">' +
+      '<input class="set-position-input" type="number" value="' + getPosition(element)[ axis ] + '" />' +
+    '</div>'
+  );
+
+  var $input = domQuery('.set-position-input', $html);
+
+  $input.addEventListener('keydown', function(event) {
+    if (event.key !== 'Enter') {
+      return;
     }
-  }));
 
-  group.entries.push(entryFactory.validationAwareTextField({
-    id: 'y',
-    label : 'y',
-    modelProperty: 'y',
-    getProperty: function(element, node) {
-      return getPosition(element).y.toString();
-    },
-    setProperty: function(element, values, node) {
-      var y = values.y;
+    var value = parseInt(event.target.value);
 
-      if (isNaN(parseInt(y))) {
-        return;
-      }
-
-      return {
-        cmd: 'elements.move',
-        context: {
-          shapes: [ element ],
-          delta:  {
-            x: 0,
-            y: parseInt(y) - getPosition(element).y
-          },
-          hints: {}
-        }
-      };
-    },
-    validate: function(element, values) {
-      var y = values.y;
-
-      return isNaN(parseInt(y)) ? { y: 'Must be an integer.' } : {};
-    },
-    buttonShow: {
-      method: function() {
-        
-        // hide clear button
-        return false;
-      }
+    if (isNaN(value)) {
+      return;
     }
-  }));
+
+    setPosition(value);
+  });
+
+  $input.addEventListener('input', function(event) {
+    var value = parseInt(event.target.value);
+
+    if (isNaN(value)) {
+      return;
+    }
+
+    if (!dragger) {
+      dragger = previewSupport.addDragger(element, canvas.getLayer('set-position-preview'));
+    }
+
+    var position = getPosition(element);
+
+    position[ axis ] = value;
+
+    position = getTopRight(position.x, position.y, element.width, element.height);
+
+    translate(dragger, position.x, position.y);
+
+    parent = getParentAtPosition(getMid(position.x, position.y, element.width, element.height));
+  });
+
+  function clear() {
+    svgClear(canvas.getLayer('set-position-preview'));
+
+    dragger = null;
+
+    parent = null;
+
+    $input.value = getPosition(element)[ axis ].toString();
+  }
+
+  $input.addEventListener('blur', clear);
+
+  eventBus.on('elements.changed', clear);
+
+  return {
+    id: axis,
+    html: $html
+  }
 }
 
-function createPositionTabGroups(element, eventBus) {
+function positionProps(group, element, injector) {
+  group.entries.push(positionEntry(element, 'x', injector));
+  group.entries.push(positionEntry(element, 'y', injector));
+}
+
+function createPositionTabGroups(element, eventBus, injector) {
 
   var referenceGroup = {
     id: 'reference',
@@ -193,7 +256,7 @@ function createPositionTabGroups(element, eventBus) {
     entries: []
   };
 
-  positionProps(positionGroup, element);
+  positionProps(positionGroup, element, injector);
 
   return [
     referenceGroup,
@@ -201,22 +264,8 @@ function createPositionTabGroups(element, eventBus) {
   ];
 }
 
-function PositionPropertiesProvider(
-  eventBus,
-  bpmnFactory,
-  elementRegistry,
-  elementTemplates,
-  translate
-) {
-
-  CamundaPropertiesProvider.call(
-    this,
-    eventBus,
-    bpmnFactory,
-    elementRegistry,
-    elementTemplates,
-    translate
-  );
+function PositionPropertiesProvider(eventBus, injector) {
+  injector.invoke(CamundaPropertiesProvider, this);
 
   var originalGetTabs = this.getTabs.bind(this);
 
@@ -228,7 +277,7 @@ function PositionPropertiesProvider(
       var positionTab = {
         id: 'position',
         label: 'Position',
-        groups: createPositionTabGroups(element, eventBus)
+        groups: createPositionTabGroups(element, eventBus, injector)
       };
 
       tabs = tabs.slice(0, 1).concat(positionTab).concat(tabs.slice(1));
@@ -242,10 +291,7 @@ inherits(PositionPropertiesProvider, CamundaPropertiesProvider);
 
 PositionPropertiesProvider.$inject = [
   'eventBus',
-  'bpmnFactory',
-  'elementRegistry',
-  'elementTemplates',
-  'translate'
+  'injector'
 ];
 
 export default {

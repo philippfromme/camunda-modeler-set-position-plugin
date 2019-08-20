@@ -20,3 +20,11 @@
 .rotate-45 {
   transform: rotate(45deg);
 }
+
+.set-position-input {
+  width: 100%;
+}
+
+.set-position-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

@@ -120,23 +120,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bpmn_js_properties_panel_lib_provider_camunda_CamundaPropertiesProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bpmn-js-properties-panel/lib/provider/camunda/CamundaPropertiesProvider */ "./node_modules/bpmn-js-properties-panel/lib/provider/camunda/CamundaPropertiesProvider.js");
 /* harmony import */ var bpmn_js_properties_panel_lib_provider_camunda_CamundaPropertiesProvider__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bpmn_js_properties_panel_lib_provider_camunda_CamundaPropertiesProvider__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var bpmn_js_lib_util_ModelUtil__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bpmn-js/lib/util/ModelUtil */ "./node_modules/bpmn-js/lib/util/ModelUtil.js");
-/* harmony import */ var bpmn_js_properties_panel_lib_factory_EntryFactory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bpmn-js-properties-panel/lib/factory/EntryFactory */ "./node_modules/bpmn-js-properties-panel/lib/factory/EntryFactory.js");
-/* harmony import */ var bpmn_js_properties_panel_lib_factory_EntryFactory__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(bpmn_js_properties_panel_lib_factory_EntryFactory__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _fortawesome_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/fontawesome */ "./node_modules/@fortawesome/fontawesome/index.es.js");
-/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowDown__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faArrowDown */ "./node_modules/@fortawesome/fontawesome-free-solid/faArrowDown.js");
-/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowDown__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faArrowDown__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowLeft__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faArrowLeft */ "./node_modules/@fortawesome/fontawesome-free-solid/faArrowLeft.js");
-/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowLeft__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faArrowLeft__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowRight__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faArrowRight */ "./node_modules/@fortawesome/fontawesome-free-solid/faArrowRight.js");
-/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowRight__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faArrowRight__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowUp__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faArrowUp */ "./node_modules/@fortawesome/fontawesome-free-solid/faArrowUp.js");
-/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowUp__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faArrowUp__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _fortawesome_fontawesome_free_solid_faDotCircle__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faDotCircle */ "./node_modules/@fortawesome/fontawesome-free-solid/faDotCircle.js");
-/* harmony import */ var _fortawesome_fontawesome_free_solid_faDotCircle__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faDotCircle__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _template_html__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./template.html */ "./client/template.html");
-/* harmony import */ var min_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! min-dom */ "./node_modules/min-dom/dist/index.esm.js");
-
-
+/* harmony import */ var _fortawesome_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/fontawesome */ "./node_modules/@fortawesome/fontawesome/index.es.js");
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowDown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faArrowDown */ "./node_modules/@fortawesome/fontawesome-free-solid/faArrowDown.js");
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowDown__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faArrowDown__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowLeft__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faArrowLeft */ "./node_modules/@fortawesome/fontawesome-free-solid/faArrowLeft.js");
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowLeft__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faArrowLeft__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowRight__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faArrowRight */ "./node_modules/@fortawesome/fontawesome-free-solid/faArrowRight.js");
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowRight__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faArrowRight__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowUp__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faArrowUp */ "./node_modules/@fortawesome/fontawesome-free-solid/faArrowUp.js");
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faArrowUp__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faArrowUp__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faDotCircle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid/faDotCircle */ "./node_modules/@fortawesome/fontawesome-free-solid/faDotCircle.js");
+/* harmony import */ var _fortawesome_fontawesome_free_solid_faDotCircle__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_solid_faDotCircle__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _template_html__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./template.html */ "./client/template.html");
+/* harmony import */ var min_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! min-dom */ "./node_modules/min-dom/dist/index.esm.js");
+/* harmony import */ var tiny_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! tiny-svg */ "./node_modules/tiny-svg/dist/index.esm.js");
+/* harmony import */ var diagram_js_lib_util_SvgTransformUtil__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! diagram-js/lib/util/SvgTransformUtil */ "./node_modules/diagram-js/lib/util/SvgTransformUtil.js");
 
 
 
@@ -150,13 +148,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
  
-_fortawesome_fontawesome__WEBPACK_IMPORTED_MODULE_4__["default"].library.add(_fortawesome_fontawesome_free_solid_faArrowDown__WEBPACK_IMPORTED_MODULE_5___default.a, _fortawesome_fontawesome_free_solid_faArrowLeft__WEBPACK_IMPORTED_MODULE_6___default.a, _fortawesome_fontawesome_free_solid_faArrowRight__WEBPACK_IMPORTED_MODULE_7___default.a, _fortawesome_fontawesome_free_solid_faArrowUp__WEBPACK_IMPORTED_MODULE_8___default.a, _fortawesome_fontawesome_free_solid_faDotCircle__WEBPACK_IMPORTED_MODULE_9___default.a);
+_fortawesome_fontawesome__WEBPACK_IMPORTED_MODULE_3__["default"].library.add(_fortawesome_fontawesome_free_solid_faArrowDown__WEBPACK_IMPORTED_MODULE_4___default.a, _fortawesome_fontawesome_free_solid_faArrowLeft__WEBPACK_IMPORTED_MODULE_5___default.a, _fortawesome_fontawesome_free_solid_faArrowRight__WEBPACK_IMPORTED_MODULE_6___default.a, _fortawesome_fontawesome_free_solid_faArrowUp__WEBPACK_IMPORTED_MODULE_7___default.a, _fortawesome_fontawesome_free_solid_faDotCircle__WEBPACK_IMPORTED_MODULE_8___default.a);
+
+
+
+
 
 
 
 
 
 var reference = 'mid-mid';
+
+var dragger;
+
+var parent = null;
 
 function getPosition(element) {
   var references = reference.split('-'),
@@ -183,14 +189,64 @@ function getPosition(element) {
   return position;
 }
 
+function getTopRight(x, y, width, height) {
+  var references = reference.split('-'),
+      verticalReference = references[0],
+      horizontalReference = references[1];
+
+  if (horizontalReference === 'mid') {
+    x = x - width / 2;
+  } else if (horizontalReference === 'right') {
+    x = x - width;
+  }
+
+  if (verticalReference === 'mid') {
+    y = y - height / 2;
+  } else if (verticalReference === 'bottom') {
+    y = y - height;
+  }
+  
+  return {
+    x: x,
+    y: y
+  };
+}
+
+function getMid(x, y, width, height) {
+  var references = reference.split('-'),
+      verticalReference = references[0],
+      horizontalReference = references[1];
+
+  if (horizontalReference === 'left') {
+    x = x + width / 2;
+  } else if (horizontalReference === 'right') {
+    x = x - width / 2;
+  }
+
+  if (verticalReference === 'top') {
+    y = y + height / 2;
+  } else if (verticalReference === 'bottom') {
+    y = y - height / 2;
+  }
+  
+  return {
+    x: x,
+    y: y
+  };
+}
+
+function getParentAtPosition(position) {
+  console.log('get parent at position', position);
+}
+
 function referenceProps(group, element, eventBus) {
-  var $html = Object(min_dom__WEBPACK_IMPORTED_MODULE_11__["domify"])(_template_html__WEBPACK_IMPORTED_MODULE_10__["default"]);
+  var $html = Object(min_dom__WEBPACK_IMPORTED_MODULE_10__["domify"])(_template_html__WEBPACK_IMPORTED_MODULE_9__["default"]);
 
-  var $active = Object(min_dom__WEBPACK_IMPORTED_MODULE_11__["query"])('[data-reference="' + reference + '"]', $html);
+  var $active = Object(min_dom__WEBPACK_IMPORTED_MODULE_10__["query"])('[data-reference="' + reference + '"]', $html);
 
-  Object(min_dom__WEBPACK_IMPORTED_MODULE_11__["classes"])($active).add('active');
+  Object(min_dom__WEBPACK_IMPORTED_MODULE_10__["classes"])($active).add('active');
 
-  var $references = Array.prototype.slice.call(Object(min_dom__WEBPACK_IMPORTED_MODULE_11__["queryAll"])('.set-position-reference', $html));
+  var $references = Array.prototype.slice.call(Object(min_dom__WEBPACK_IMPORTED_MODULE_10__["queryAll"])('.set-position-reference', $html));
 
   $references.forEach(function($reference) {
     $reference.addEventListener('click', function() {
@@ -198,9 +254,9 @@ function referenceProps(group, element, eventBus) {
 
       $references.forEach(function($reference) {
         if ($reference.dataset.reference === reference) {
-          Object(min_dom__WEBPACK_IMPORTED_MODULE_11__["classes"])($reference).add('active');
+          Object(min_dom__WEBPACK_IMPORTED_MODULE_10__["classes"])($reference).add('active');
         } else {
-          Object(min_dom__WEBPACK_IMPORTED_MODULE_11__["classes"])($reference).remove('active');
+          Object(min_dom__WEBPACK_IMPORTED_MODULE_10__["classes"])($reference).remove('active');
         }
       });
 
@@ -226,89 +282,94 @@ function referenceProps(group, element, eventBus) {
   })
 }
 
-function positionProps(group, element) {
-  group.entries.push(bpmn_js_properties_panel_lib_factory_EntryFactory__WEBPACK_IMPORTED_MODULE_3___default.a.validationAwareTextField({
-    id: 'x',
-    label : 'x',
-    modelProperty: 'x',
-    getProperty: function(element, node) {
-      return getPosition(element).x.toString();
-    },
-    setProperty: function(element, values, node) {
-      var x = values.x;
+function positionEntry(element, axis, injector) {
+  var canvas = injector.get('canvas'),
+      eventBus = injector.get('eventBus'),
+      modeling = injector.get('modeling'),
+      previewSupport = injector.get('previewSupport');
 
-      if (isNaN(parseInt(x))) {
-        return;
-      }
+  function setPosition(value) {
+    var delta = {
+      x: 0,
+      y: 0
+    };
 
-      return {
-        cmd: 'elements.move',
-        context: {
-          shapes: [ element ],
-          delta:  {
-            x: parseInt(x) - getPosition(element).x,
-            y: 0
-          },
-          hints: {}
-        }
-      };
-    },
-    validate: function(element, values) {
-      var x = values.x;
+    delta[ axis ] = value - getPosition(element)[ axis ];
 
-      return isNaN(parseInt(x)) ? { x: 'Must be an integer.' } : {};
-    },
-    buttonShow: {
-      method: function() {
-        
-        // hide clear button
-        return false;
-      }
+    modeling.moveShape(element, delta);
+  }
+
+  var $html = Object(min_dom__WEBPACK_IMPORTED_MODULE_10__["domify"])(
+    '<label>' + axis + '</label>' +
+    '<div class="bpp-field-wrapper">' +
+      '<input class="set-position-input" type="number" value="' + getPosition(element)[ axis ] + '" />' +
+    '</div>'
+  );
+
+  var $input = Object(min_dom__WEBPACK_IMPORTED_MODULE_10__["query"])('.set-position-input', $html);
+
+  $input.addEventListener('keydown', function(event) {
+    if (event.key !== 'Enter') {
+      return;
     }
-  }));
 
-  group.entries.push(bpmn_js_properties_panel_lib_factory_EntryFactory__WEBPACK_IMPORTED_MODULE_3___default.a.validationAwareTextField({
-    id: 'y',
-    label : 'y',
-    modelProperty: 'y',
-    getProperty: function(element, node) {
-      return getPosition(element).y.toString();
-    },
-    setProperty: function(element, values, node) {
-      var y = values.y;
+    var value = parseInt(event.target.value);
 
-      if (isNaN(parseInt(y))) {
-        return;
-      }
-
-      return {
-        cmd: 'elements.move',
-        context: {
-          shapes: [ element ],
-          delta:  {
-            x: 0,
-            y: parseInt(y) - getPosition(element).y
-          },
-          hints: {}
-        }
-      };
-    },
-    validate: function(element, values) {
-      var y = values.y;
-
-      return isNaN(parseInt(y)) ? { y: 'Must be an integer.' } : {};
-    },
-    buttonShow: {
-      method: function() {
-        
-        // hide clear button
-        return false;
-      }
+    if (isNaN(value)) {
+      return;
     }
-  }));
+
+    setPosition(value);
+  });
+
+  $input.addEventListener('input', function(event) {
+    var value = parseInt(event.target.value);
+
+    if (isNaN(value)) {
+      return;
+    }
+
+    if (!dragger) {
+      dragger = previewSupport.addDragger(element, canvas.getLayer('set-position-preview'));
+    }
+
+    var position = getPosition(element);
+
+    position[ axis ] = value;
+
+    position = getTopRight(position.x, position.y, element.width, element.height);
+
+    Object(diagram_js_lib_util_SvgTransformUtil__WEBPACK_IMPORTED_MODULE_12__["translate"])(dragger, position.x, position.y);
+
+    parent = getParentAtPosition(getMid(position.x, position.y, element.width, element.height));
+  });
+
+  function clear() {
+    Object(tiny_svg__WEBPACK_IMPORTED_MODULE_11__["clear"])(canvas.getLayer('set-position-preview'));
+
+    dragger = null;
+
+    parent = null;
+
+    $input.value = getPosition(element)[ axis ].toString();
+  }
+
+  $input.addEventListener('blur', clear);
+
+  eventBus.on('elements.changed', clear);
+
+  return {
+    id: axis,
+    html: $html
+  }
 }
 
-function createPositionTabGroups(element, eventBus) {
+function positionProps(group, element, injector) {
+  group.entries.push(positionEntry(element, 'x', injector));
+  group.entries.push(positionEntry(element, 'y', injector));
+}
+
+function createPositionTabGroups(element, eventBus, injector) {
 
   var referenceGroup = {
     id: 'reference',
@@ -324,7 +385,7 @@ function createPositionTabGroups(element, eventBus) {
     entries: []
   };
 
-  positionProps(positionGroup, element);
+  positionProps(positionGroup, element, injector);
 
   return [
     referenceGroup,
@@ -332,22 +393,8 @@ function createPositionTabGroups(element, eventBus) {
   ];
 }
 
-function PositionPropertiesProvider(
-  eventBus,
-  bpmnFactory,
-  elementRegistry,
-  elementTemplates,
-  translate
-) {
-
-  bpmn_js_properties_panel_lib_provider_camunda_CamundaPropertiesProvider__WEBPACK_IMPORTED_MODULE_1___default.a.call(
-    this,
-    eventBus,
-    bpmnFactory,
-    elementRegistry,
-    elementTemplates,
-    translate
-  );
+function PositionPropertiesProvider(eventBus, injector) {
+  injector.invoke(bpmn_js_properties_panel_lib_provider_camunda_CamundaPropertiesProvider__WEBPACK_IMPORTED_MODULE_1___default.a, this);
 
   var originalGetTabs = this.getTabs.bind(this);
 
@@ -359,7 +406,7 @@ function PositionPropertiesProvider(
       var positionTab = {
         id: 'position',
         label: 'Position',
-        groups: createPositionTabGroups(element, eventBus)
+        groups: createPositionTabGroups(element, eventBus, injector)
       };
 
       tabs = tabs.slice(0, 1).concat(positionTab).concat(tabs.slice(1));
@@ -373,10 +420,7 @@ inherits__WEBPACK_IMPORTED_MODULE_0___default()(PositionPropertiesProvider, bpmn
 
 PositionPropertiesProvider.$inject = [
   'eventBus',
-  'bpmnFactory',
-  'elementRegistry',
-  'elementTemplates',
-  'translate'
+  'injector'
 ];
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -14526,6 +14570,82 @@ function getPluginsDirectory() {
 
 /***/ }),
 
+/***/ "./node_modules/diagram-js/lib/util/SvgTransformUtil.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/diagram-js/lib/util/SvgTransformUtil.js ***!
+  \**************************************************************/
+/*! exports provided: transform, translate, rotate, scale */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "transform", function() { return transform; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "translate", function() { return translate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rotate", function() { return rotate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scale", function() { return scale; });
+/* harmony import */ var tiny_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tiny-svg */ "./node_modules/tiny-svg/dist/index.esm.js");
+
+
+
+/**
+ * @param {<SVGElement>} element
+ * @param {Number} x
+ * @param {Number} y
+ * @param {Number} angle
+ * @param {Number} amount
+ */
+function transform(gfx, x, y, angle, amount) {
+  var translate = Object(tiny_svg__WEBPACK_IMPORTED_MODULE_0__["createTransform"])();
+  translate.setTranslate(x, y);
+
+  var rotate = Object(tiny_svg__WEBPACK_IMPORTED_MODULE_0__["createTransform"])();
+  rotate.setRotate(angle, 0, 0);
+
+  var scale = Object(tiny_svg__WEBPACK_IMPORTED_MODULE_0__["createTransform"])();
+  scale.setScale(amount || 1, amount || 1);
+
+  Object(tiny_svg__WEBPACK_IMPORTED_MODULE_0__["transform"])(gfx, [ translate, rotate, scale ]);
+}
+
+
+/**
+ * @param {SVGElement} element
+ * @param {Number} x
+ * @param {Number} y
+ */
+function translate(gfx, x, y) {
+  var translate = Object(tiny_svg__WEBPACK_IMPORTED_MODULE_0__["createTransform"])();
+  translate.setTranslate(x, y);
+
+  Object(tiny_svg__WEBPACK_IMPORTED_MODULE_0__["transform"])(gfx, translate);
+}
+
+
+/**
+ * @param {SVGElement} element
+ * @param {Number} angle
+ */
+function rotate(gfx, angle) {
+  var rotate = Object(tiny_svg__WEBPACK_IMPORTED_MODULE_0__["createTransform"])();
+  rotate.setRotate(angle, 0, 0);
+
+  Object(tiny_svg__WEBPACK_IMPORTED_MODULE_0__["transform"])(gfx, rotate);
+}
+
+
+/**
+ * @param {SVGElement} element
+ * @param {Number} amount
+ */
+function scale(gfx, amount) {
+  var scale = Object(tiny_svg__WEBPACK_IMPORTED_MODULE_0__["createTransform"])();
+  scale.setScale(amount, amount);
+
+  Object(tiny_svg__WEBPACK_IMPORTED_MODULE_0__["transform"])(gfx, scale);
+}
+
+/***/ }),
+
 /***/ "./node_modules/ids/dist/index.esm.js":
 /*!********************************************!*\
   !*** ./node_modules/ids/dist/index.esm.js ***!
@@ -22295,53 +22415,44 @@ function flatten(arr) {
 
 var nativeToString = Object.prototype.toString;
 var nativeHasOwnProperty = Object.prototype.hasOwnProperty;
-
 function isUndefined(obj) {
   return obj === undefined;
 }
-
 function isDefined(obj) {
   return obj !== undefined;
 }
-
 function isNil(obj) {
   return obj == null;
 }
-
 function isArray(obj) {
   return nativeToString.call(obj) === '[object Array]';
 }
-
 function isObject(obj) {
   return nativeToString.call(obj) === '[object Object]';
 }
-
 function isNumber(obj) {
   return nativeToString.call(obj) === '[object Number]';
 }
-
 function isFunction(obj) {
-  return nativeToString.call(obj) === '[object Function]';
+  var tag = nativeToString.call(obj);
+  return tag === '[object Function]' || tag === '[object AsyncFunction]' || tag === '[object GeneratorFunction]' || tag === '[object AsyncGeneratorFunction]' || tag === '[object Proxy]';
 }
-
 function isString(obj) {
   return nativeToString.call(obj) === '[object String]';
 }
-
 /**
  * Ensure collection is an array.
  *
  * @param {Object} obj
  */
-function ensureArray(obj) {
 
+function ensureArray(obj) {
   if (isArray(obj)) {
     return;
   }
 
   throw new Error('must supply array');
 }
-
 /**
  * Return true, if target owns a property with the given key.
  *
@@ -22350,6 +22461,7 @@ function ensureArray(obj) {
  *
  * @return {Boolean}
  */
+
 function has(target, key) {
   return nativeHasOwnProperty.call(target, key);
 }
@@ -22362,23 +22474,18 @@ function has(target, key) {
  *
  * @return {Object}
  */
+
 function find(collection, matcher) {
-
   matcher = toMatcher(matcher);
-
   var match;
-
   forEach(collection, function (val, key) {
     if (matcher(val, key)) {
       match = val;
-
       return false;
     }
   });
-
   return match;
 }
-
 /**
  * Find element index in collection.
  *
@@ -22387,23 +22494,18 @@ function find(collection, matcher) {
  *
  * @return {Object}
  */
+
 function findIndex(collection, matcher) {
-
   matcher = toMatcher(matcher);
-
   var idx = isArray(collection) ? -1 : undefined;
-
   forEach(collection, function (val, key) {
     if (matcher(val, key)) {
       idx = key;
-
       return false;
     }
   });
-
   return idx;
 }
-
 /**
  * Find element in collection.
  *
@@ -22412,19 +22514,16 @@ function findIndex(collection, matcher) {
  *
  * @return {Array} result
  */
+
 function filter(collection, matcher) {
-
   var result = [];
-
   forEach(collection, function (val, key) {
     if (matcher(val, key)) {
       result.push(val);
     }
   });
-
   return result;
 }
-
 /**
  * Iterate over collection; returning something
  * (non-undefined) will stop iteration.
@@ -22434,7 +22533,9 @@ function filter(collection, matcher) {
  *
  * @return {Object} return result that stopped the iteration
  */
+
 function forEach(collection, iterator) {
+  var val, result;
 
   if (isUndefined(collection)) {
     return;
@@ -22443,19 +22544,16 @@ function forEach(collection, iterator) {
   var convertKey = isArray(collection) ? toNum : identity;
 
   for (var key in collection) {
-
     if (has(collection, key)) {
-      var val = collection[key];
-
-      var result = iterator(val, convertKey(key));
+      val = collection[key];
+      result = iterator(val, convertKey(key));
 
       if (result === false) {
-        return;
+        return val;
       }
     }
   }
 }
-
 /**
  * Return collection without element.
  *
@@ -22464,21 +22562,18 @@ function forEach(collection, iterator) {
  *
  * @return {Array}
  */
-function without(arr, matcher) {
 
+function without(arr, matcher) {
   if (isUndefined(arr)) {
     return [];
   }
 
   ensureArray(arr);
-
   matcher = toMatcher(matcher);
-
   return arr.filter(function (el, idx) {
     return !matcher(el, idx);
   });
 }
-
 /**
  * Reduce collection, returning a single result.
  *
@@ -22488,15 +22583,13 @@ function without(arr, matcher) {
  *
  * @return {Any} result returned from last iterator
  */
-function reduce(collection, iterator, result) {
 
+function reduce(collection, iterator, result) {
   forEach(collection, function (value, idx) {
     result = iterator(result, value, idx);
   });
-
   return result;
 }
-
 /**
  * Return true if every element in the collection
  * matches the criteria.
@@ -22506,13 +22599,12 @@ function reduce(collection, iterator, result) {
  *
  * @return {Boolean}
  */
-function every(collection, matcher) {
 
-  return reduce(collection, function (matches, val, key) {
+function every(collection, matcher) {
+  return !!reduce(collection, function (matches, val, key) {
     return matches && matcher(val, key);
   }, true);
 }
-
 /**
  * Return true if some elements in the collection
  * match the criteria.
@@ -22522,11 +22614,10 @@ function every(collection, matcher) {
  *
  * @return {Boolean}
  */
-function some(collection, matcher) {
 
+function some(collection, matcher) {
   return !!find(collection, matcher);
 }
-
 /**
  * Transform a collection into another collection
  * by piping each member through the given fn.
@@ -22536,17 +22627,14 @@ function some(collection, matcher) {
  *
  * @return {Array} transformed collection
  */
+
 function map(collection, fn) {
-
   var result = [];
-
   forEach(collection, function (val, key) {
     result.push(fn(val, key));
   });
-
   return result;
 }
-
 /**
  * Get the collections keys.
  *
@@ -22554,10 +22642,10 @@ function map(collection, fn) {
  *
  * @return {Array}
  */
+
 function keys(collection) {
   return collection && Object.keys(collection) || [];
 }
-
 /**
  * Shorthand for `keys(o).length`.
  *
@@ -22565,10 +22653,10 @@ function keys(collection) {
  *
  * @return {Number}
  */
+
 function size(collection) {
   return keys(collection).length;
 }
-
 /**
  * Get the values in the collection.
  *
@@ -22576,12 +22664,12 @@ function size(collection) {
  *
  * @return {Array}
  */
+
 function values(collection) {
   return map(collection, function (val) {
     return val;
   });
 }
-
 /**
  * Group collection members by attribute.
  *
@@ -22590,15 +22678,12 @@ function values(collection) {
  *
  * @return {Object} map with { attrValue => [ a, b, c ] }
  */
+
 function groupBy(collection, extractor) {
   var grouped = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-
   extractor = toExtractor(extractor);
-
   forEach(collection, function (val) {
     var discriminator = extractor(val) || '_';
-
     var group = grouped[discriminator];
 
     if (!group) {
@@ -22607,33 +22692,25 @@ function groupBy(collection, extractor) {
 
     group.push(val);
   });
-
   return grouped;
 }
-
 function uniqueBy(extractor) {
-
   extractor = toExtractor(extractor);
-
   var grouped = {};
 
-  for (var _len = arguments.length, collections = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+  for (var _len = arguments.length, collections = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     collections[_key - 1] = arguments[_key];
   }
 
   forEach(collections, function (c) {
     return groupBy(c, extractor, grouped);
   });
-
   var result = map(grouped, function (val, key) {
     return val[0];
   });
-
   return result;
 }
-
 var unionBy = uniqueBy;
-
 /**
  * Sort collection by criteria.
  *
@@ -22642,15 +22719,12 @@ var unionBy = uniqueBy;
  *
  * @return {Array}
  */
+
 function sortBy(collection, extractor) {
-
   extractor = toExtractor(extractor);
-
   var sorted = [];
-
   forEach(collection, function (value, key) {
     var disc = extractor(value, key);
-
     var entry = {
       d: disc,
       v: value
@@ -22659,22 +22733,19 @@ function sortBy(collection, extractor) {
     for (var idx = 0; idx < sorted.length; idx++) {
       var d = sorted[idx].d;
 
-
       if (disc < d) {
         sorted.splice(idx, 0, entry);
         return;
       }
-    }
+    } // not inserted, append (!)
 
-    // not inserted, append (!)
+
     sorted.push(entry);
   });
-
   return map(sorted, function (e) {
     return e.v;
   });
 }
-
 /**
  * Create an object pattern matcher.
  *
@@ -22688,10 +22759,9 @@ function sortBy(collection, extractor) {
  *
  * @return {Function} matcherFn
  */
+
 function matchPattern(pattern) {
-
   return function (el) {
-
     return every(pattern, function (val, key) {
       return el[key] === val;
     });
@@ -22728,18 +22798,13 @@ function toNum(arg) {
  * @return {Function} debounced function
  */
 function debounce(fn, timeout) {
-
   var timer;
-
   var lastArgs;
   var lastThis;
-
   var lastNow;
 
   function fire() {
-
     var now = Date.now();
-
     var scheduledDiff = lastNow + timeout - now;
 
     if (scheduledDiff > 0) {
@@ -22747,7 +22812,6 @@ function debounce(fn, timeout) {
     }
 
     fn.apply(lastThis, lastArgs);
-
     timer = lastNow = lastArgs = lastThis = undefined;
   }
 
@@ -22756,23 +22820,20 @@ function debounce(fn, timeout) {
   }
 
   return function () {
-
     lastNow = Date.now();
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
     lastArgs = args;
-    lastThis = this;
+    lastThis = this; // ensure an execution is scheduled
 
-    // ensure an execution is scheduled
     if (!timer) {
       schedule(timeout);
     }
   };
 }
-
 /**
  * Throttle fn, calling at most once
  * in the given interval.
@@ -22782,25 +22843,21 @@ function debounce(fn, timeout) {
  *
  * @return {Function} throttled function
  */
+
 function throttle(fn, interval) {
-
   var throttling = false;
-
   return function () {
-
     if (throttling) {
       return;
     }
 
-    fn.apply(undefined, arguments);
+    fn.apply(void 0, arguments);
     throttling = true;
-
     setTimeout(function () {
       throttling = false;
     }, interval);
   };
 }
-
 /**
  * Bind function against target <this>.
  *
@@ -22809,11 +22866,28 @@ function throttle(fn, interval) {
  *
  * @return {Function} bound function
  */
+
 function bind(fn, target) {
   return fn.bind(target);
 }
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
 
 /**
  * Convenience wrapper for `Object.assign`.
@@ -22823,14 +22897,14 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
  *
  * @return {Object} the target
  */
+
 function assign(target) {
-  for (var _len = arguments.length, others = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+  for (var _len = arguments.length, others = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     others[_key - 1] = arguments[_key];
   }
 
-  return _extends.apply(undefined, [target].concat(others));
+  return _extends.apply(void 0, [target].concat(others));
 }
-
 /**
  * Pick given properties from the target object.
  *
@@ -22839,22 +22913,17 @@ function assign(target) {
  *
  * @return {Object} target
  */
+
 function pick(target, properties) {
-
   var result = {};
-
   var obj = Object(target);
-
   forEach(properties, function (prop) {
-
     if (prop in obj) {
       result[prop] = target[prop];
     }
   });
-
   return result;
 }
-
 /**
  * Pick all target properties, excluding the given ones.
  *
@@ -22863,22 +22932,17 @@ function pick(target, properties) {
  *
  * @return {Object} target
  */
+
 function omit(target, properties) {
-
   var result = {};
-
   var obj = Object(target);
-
   forEach(obj, function (prop, key) {
-
     if (properties.indexOf(key) === -1) {
       result[key] = prop;
     }
   });
-
   return result;
 }
-
 /**
  * Recursively merge `...sources` into given target.
  *
@@ -22889,8 +22953,9 @@ function omit(target, properties) {
  *
  * @return {Object} the target
  */
+
 function merge(target) {
-  for (var _len2 = arguments.length, sources = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+  for (var _len2 = arguments.length, sources = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
     sources[_key2 - 1] = arguments[_key2];
   }
 
@@ -22899,18 +22964,15 @@ function merge(target) {
   }
 
   forEach(sources, function (source) {
-
     // skip non-obj sources, i.e. null
     if (!source || !isObject(source)) {
       return;
     }
 
     forEach(source, function (sourceVal, key) {
-
       var targetVal = target[key];
 
       if (isObject(sourceVal)) {
-
         if (!isObject(targetVal)) {
           // override target[key] with object
           targetVal = {};
@@ -22922,7 +22984,6 @@ function merge(target) {
       }
     });
   });
-
   return target;
 }
 
@@ -23652,6 +23713,870 @@ function splitStr(str, position) {
     after: str.substring(position)
   };
 }
+
+/***/ }),
+
+/***/ "./node_modules/tiny-svg/dist/index.esm.js":
+/*!*************************************************!*\
+  !*** ./node_modules/tiny-svg/dist/index.esm.js ***!
+  \*************************************************/
+/*! exports provided: append, appendTo, attr, classes, clear, clone, create, innerSVG, prepend, prependTo, remove, replace, transform, on, off, createPoint, createMatrix, createTransform, select, selectAll */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "append", function() { return append; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendTo", function() { return appendTo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "attr", function() { return attr; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "classes", function() { return classes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clear", function() { return clear; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clone", function() { return clone; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "create", function() { return create; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "innerSVG", function() { return innerSVG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prepend", function() { return prepend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prependTo", function() { return prependTo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "remove", function() { return remove; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replace", function() { return replace; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "transform", function() { return transform; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "on", function() { return on; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "off", function() { return off; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createPoint", function() { return createPoint; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createMatrix", function() { return createMatrix; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createTransform", function() { return createTransform; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "select", function() { return select; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectAll", function() { return selectAll; });
+function ensureImported(element, target) {
+
+  if (element.ownerDocument !== target.ownerDocument) {
+    try {
+      // may fail on webkit
+      return target.ownerDocument.importNode(element, true);
+    } catch (e) {
+      // ignore
+    }
+  }
+
+  return element;
+}
+
+/**
+ * appendTo utility
+ */
+
+/**
+ * Append a node to a target element and return the appended node.
+ *
+ * @param  {SVGElement} element
+ * @param  {SVGElement} target
+ *
+ * @return {SVGElement} the appended node
+ */
+function appendTo(element, target) {
+  return target.appendChild(ensureImported(element, target));
+}
+
+/**
+ * append utility
+ */
+
+/**
+ * Append a node to an element
+ *
+ * @param  {SVGElement} element
+ * @param  {SVGElement} node
+ *
+ * @return {SVGElement} the element
+ */
+function append(target, node) {
+  appendTo(node, target);
+  return target;
+}
+
+/**
+ * attribute accessor utility
+ */
+
+var LENGTH_ATTR = 2;
+
+var CSS_PROPERTIES = {
+  'alignment-baseline': 1,
+  'baseline-shift': 1,
+  'clip': 1,
+  'clip-path': 1,
+  'clip-rule': 1,
+  'color': 1,
+  'color-interpolation': 1,
+  'color-interpolation-filters': 1,
+  'color-profile': 1,
+  'color-rendering': 1,
+  'cursor': 1,
+  'direction': 1,
+  'display': 1,
+  'dominant-baseline': 1,
+  'enable-background': 1,
+  'fill': 1,
+  'fill-opacity': 1,
+  'fill-rule': 1,
+  'filter': 1,
+  'flood-color': 1,
+  'flood-opacity': 1,
+  'font': 1,
+  'font-family': 1,
+  'font-size': LENGTH_ATTR,
+  'font-size-adjust': 1,
+  'font-stretch': 1,
+  'font-style': 1,
+  'font-variant': 1,
+  'font-weight': 1,
+  'glyph-orientation-horizontal': 1,
+  'glyph-orientation-vertical': 1,
+  'image-rendering': 1,
+  'kerning': 1,
+  'letter-spacing': 1,
+  'lighting-color': 1,
+  'marker': 1,
+  'marker-end': 1,
+  'marker-mid': 1,
+  'marker-start': 1,
+  'mask': 1,
+  'opacity': 1,
+  'overflow': 1,
+  'pointer-events': 1,
+  'shape-rendering': 1,
+  'stop-color': 1,
+  'stop-opacity': 1,
+  'stroke': 1,
+  'stroke-dasharray': 1,
+  'stroke-dashoffset': 1,
+  'stroke-linecap': 1,
+  'stroke-linejoin': 1,
+  'stroke-miterlimit': 1,
+  'stroke-opacity': 1,
+  'stroke-width': LENGTH_ATTR,
+  'text-anchor': 1,
+  'text-decoration': 1,
+  'text-rendering': 1,
+  'unicode-bidi': 1,
+  'visibility': 1,
+  'word-spacing': 1,
+  'writing-mode': 1
+};
+
+
+function getAttribute(node, name) {
+  if (CSS_PROPERTIES[name]) {
+    return node.style[name];
+  } else {
+    return node.getAttributeNS(null, name);
+  }
+}
+
+function setAttribute(node, name, value) {
+  var hyphenated = name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+
+  var type = CSS_PROPERTIES[hyphenated];
+
+  if (type) {
+    // append pixel unit, unless present
+    if (type === LENGTH_ATTR && typeof value === 'number') {
+      value = String(value) + 'px';
+    }
+
+    node.style[hyphenated] = value;
+  } else {
+    node.setAttributeNS(null, name, value);
+  }
+}
+
+function setAttributes(node, attrs) {
+
+  var names = Object.keys(attrs), i, name;
+
+  for (i = 0, name; (name = names[i]); i++) {
+    setAttribute(node, name, attrs[name]);
+  }
+}
+
+/**
+ * Gets or sets raw attributes on a node.
+ *
+ * @param  {SVGElement} node
+ * @param  {Object} [attrs]
+ * @param  {String} [name]
+ * @param  {String} [value]
+ *
+ * @return {String}
+ */
+function attr(node, name, value) {
+  if (typeof name === 'string') {
+    if (value !== undefined) {
+      setAttribute(node, name, value);
+    } else {
+      return getAttribute(node, name);
+    }
+  } else {
+    setAttributes(node, name);
+  }
+
+  return node;
+}
+
+/**
+ * Clear utility
+ */
+function index(arr, obj) {
+  if (arr.indexOf) {
+    return arr.indexOf(obj);
+  }
+
+
+  for (var i = 0; i < arr.length; ++i) {
+    if (arr[i] === obj) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+
+var re = /\s+/;
+
+var toString = Object.prototype.toString;
+
+function defined(o) {
+  return typeof o !== 'undefined';
+}
+
+/**
+ * Wrap `el` in a `ClassList`.
+ *
+ * @param {Element} el
+ * @return {ClassList}
+ * @api public
+ */
+
+function classes(el) {
+  return new ClassList(el);
+}
+
+function ClassList(el) {
+  if (!el || !el.nodeType) {
+    throw new Error('A DOM element reference is required');
+  }
+  this.el = el;
+  this.list = el.classList;
+}
+
+/**
+ * Add class `name` if not already present.
+ *
+ * @param {String} name
+ * @return {ClassList}
+ * @api public
+ */
+
+ClassList.prototype.add = function(name) {
+
+  // classList
+  if (this.list) {
+    this.list.add(name);
+    return this;
+  }
+
+  // fallback
+  var arr = this.array();
+  var i = index(arr, name);
+  if (!~i) {
+    arr.push(name);
+  }
+
+  if (defined(this.el.className.baseVal)) {
+    this.el.className.baseVal = arr.join(' ');
+  } else {
+    this.el.className = arr.join(' ');
+  }
+
+  return this;
+};
+
+/**
+ * Remove class `name` when present, or
+ * pass a regular expression to remove
+ * any which match.
+ *
+ * @param {String|RegExp} name
+ * @return {ClassList}
+ * @api public
+ */
+
+ClassList.prototype.remove = function(name) {
+  if ('[object RegExp]' === toString.call(name)) {
+    return this.removeMatching(name);
+  }
+
+  // classList
+  if (this.list) {
+    this.list.remove(name);
+    return this;
+  }
+
+  // fallback
+  var arr = this.array();
+  var i = index(arr, name);
+  if (~i) {
+    arr.splice(i, 1);
+  }
+  this.el.className.baseVal = arr.join(' ');
+  return this;
+};
+
+/**
+ * Remove all classes matching `re`.
+ *
+ * @param {RegExp} re
+ * @return {ClassList}
+ * @api private
+ */
+
+ClassList.prototype.removeMatching = function(re) {
+  var arr = this.array();
+  for (var i = 0; i < arr.length; i++) {
+    if (re.test(arr[i])) {
+      this.remove(arr[i]);
+    }
+  }
+  return this;
+};
+
+/**
+ * Toggle class `name`, can force state via `force`.
+ *
+ * For browsers that support classList, but do not support `force` yet,
+ * the mistake will be detected and corrected.
+ *
+ * @param {String} name
+ * @param {Boolean} force
+ * @return {ClassList}
+ * @api public
+ */
+
+ClassList.prototype.toggle = function(name, force) {
+  // classList
+  if (this.list) {
+    if (defined(force)) {
+      if (force !== this.list.toggle(name, force)) {
+        this.list.toggle(name); // toggle again to correct
+      }
+    } else {
+      this.list.toggle(name);
+    }
+    return this;
+  }
+
+  // fallback
+  if (defined(force)) {
+    if (!force) {
+      this.remove(name);
+    } else {
+      this.add(name);
+    }
+  } else {
+    if (this.has(name)) {
+      this.remove(name);
+    } else {
+      this.add(name);
+    }
+  }
+
+  return this;
+};
+
+/**
+ * Return an array of classes.
+ *
+ * @return {Array}
+ * @api public
+ */
+
+ClassList.prototype.array = function() {
+  var className = this.el.getAttribute('class') || '';
+  var str = className.replace(/^\s+|\s+$/g, '');
+  var arr = str.split(re);
+  if ('' === arr[0]) {
+    arr.shift();
+  }
+  return arr;
+};
+
+/**
+ * Check if class `name` is present.
+ *
+ * @param {String} name
+ * @return {ClassList}
+ * @api public
+ */
+
+ClassList.prototype.has =
+ClassList.prototype.contains = function(name) {
+  return (
+    this.list ?
+      this.list.contains(name) :
+      !! ~index(this.array(), name)
+  );
+};
+
+function remove(element) {
+  var parent = element.parentNode;
+
+  if (parent) {
+    parent.removeChild(element);
+  }
+
+  return element;
+}
+
+/**
+ * Clear utility
+ */
+
+/**
+ * Removes all children from the given element
+ *
+ * @param  {DOMElement} element
+ * @return {DOMElement} the element (for chaining)
+ */
+function clear(element) {
+  var child;
+
+  while ((child = element.firstChild)) {
+    remove(child);
+  }
+
+  return element;
+}
+
+function clone(element) {
+  return element.cloneNode(true);
+}
+
+var ns = {
+  svg: 'http://www.w3.org/2000/svg'
+};
+
+/**
+ * DOM parsing utility
+ */
+
+var SVG_START = '<svg xmlns="' + ns.svg + '"';
+
+function parse(svg) {
+
+  var unwrap = false;
+
+  // ensure we import a valid svg document
+  if (svg.substring(0, 4) === '<svg') {
+    if (svg.indexOf(ns.svg) === -1) {
+      svg = SVG_START + svg.substring(4);
+    }
+  } else {
+    // namespace svg
+    svg = SVG_START + '>' + svg + '</svg>';
+    unwrap = true;
+  }
+
+  var parsed = parseDocument(svg);
+
+  if (!unwrap) {
+    return parsed;
+  }
+
+  var fragment = document.createDocumentFragment();
+
+  var parent = parsed.firstChild;
+
+  while (parent.firstChild) {
+    fragment.appendChild(parent.firstChild);
+  }
+
+  return fragment;
+}
+
+function parseDocument(svg) {
+
+  var parser;
+
+  // parse
+  parser = new DOMParser();
+  parser.async = false;
+
+  return parser.parseFromString(svg, 'text/xml');
+}
+
+/**
+ * Create utility for SVG elements
+ */
+
+
+/**
+ * Create a specific type from name or SVG markup.
+ *
+ * @param {String} name the name or markup of the element
+ * @param {Object} [attrs] attributes to set on the element
+ *
+ * @returns {SVGElement}
+ */
+function create(name, attrs) {
+  var element;
+
+  if (name.charAt(0) === '<') {
+    element = parse(name).firstChild;
+    element = document.importNode(element, true);
+  } else {
+    element = document.createElementNS(ns.svg, name);
+  }
+
+  if (attrs) {
+    attr(element, attrs);
+  }
+
+  return element;
+}
+
+/**
+ * Events handling utility
+ */
+
+function on(node, event, listener, useCapture) {
+  node.addEventListener(event, listener, useCapture);
+}
+
+function off(node, event, listener, useCapture) {
+  node.removeEventListener(event, listener, useCapture);
+}
+
+/**
+ * Geometry helpers
+ */
+
+// fake node used to instantiate svg geometry elements
+var node = create('svg');
+
+function extend(object, props) {
+  var i, k, keys = Object.keys(props);
+
+  for (i = 0; (k = keys[i]); i++) {
+    object[k] = props[k];
+  }
+
+  return object;
+}
+
+
+function createPoint(x, y) {
+  var point = node.createSVGPoint();
+
+  switch (arguments.length) {
+  case 0:
+    return point;
+  case 2:
+    x = {
+      x: x,
+      y: y
+    };
+    break;
+  }
+
+  return extend(point, x);
+}
+
+/**
+ * Create matrix via args.
+ *
+ * @example
+ *
+ * createMatrix({ a: 1, b: 1 });
+ * createMatrix();
+ * createMatrix(1, 2, 0, 0, 30, 20);
+ *
+ * @return {SVGMatrix}
+ */
+function createMatrix(a, b, c, d, e, f) {
+  var matrix = node.createSVGMatrix();
+
+  switch (arguments.length) {
+  case 0:
+    return matrix;
+  case 1:
+    return extend(matrix, a);
+  case 6:
+    return extend(matrix, {
+      a: a,
+      b: b,
+      c: c,
+      d: d,
+      e: e,
+      f: f
+    });
+  }
+}
+
+function createTransform(matrix) {
+  if (matrix) {
+    return node.createSVGTransformFromMatrix(matrix);
+  } else {
+    return node.createSVGTransform();
+  }
+}
+
+/**
+ * Serialization util
+ */
+
+var TEXT_ENTITIES = /([&<>]{1})/g;
+var ATTR_ENTITIES = /([\n\r"]{1})/g;
+
+var ENTITY_REPLACEMENT = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '\''
+};
+
+function escape(str, pattern) {
+
+  function replaceFn(match, entity) {
+    return ENTITY_REPLACEMENT[entity] || entity;
+  }
+
+  return str.replace(pattern, replaceFn);
+}
+
+function serialize(node, output) {
+
+  var i, len, attrMap, attrNode, childNodes;
+
+  switch (node.nodeType) {
+  // TEXT
+  case 3:
+    // replace special XML characters
+    output.push(escape(node.textContent, TEXT_ENTITIES));
+    break;
+
+  // ELEMENT
+  case 1:
+    output.push('<', node.tagName);
+
+    if (node.hasAttributes()) {
+      attrMap = node.attributes;
+      for (i = 0, len = attrMap.length; i < len; ++i) {
+        attrNode = attrMap.item(i);
+        output.push(' ', attrNode.name, '="', escape(attrNode.value, ATTR_ENTITIES), '"');
+      }
+    }
+
+    if (node.hasChildNodes()) {
+      output.push('>');
+      childNodes = node.childNodes;
+      for (i = 0, len = childNodes.length; i < len; ++i) {
+        serialize(childNodes.item(i), output);
+      }
+      output.push('</', node.tagName, '>');
+    } else {
+      output.push('/>');
+    }
+    break;
+
+  // COMMENT
+  case 8:
+    output.push('<!--', escape(node.nodeValue, TEXT_ENTITIES), '-->');
+    break;
+
+  // CDATA
+  case 4:
+    output.push('<![CDATA[', node.nodeValue, ']]>');
+    break;
+
+  default:
+    throw new Error('unable to handle node ' + node.nodeType);
+  }
+
+  return output;
+}
+
+/**
+ * innerHTML like functionality for SVG elements.
+ * based on innerSVG (https://code.google.com/p/innersvg)
+ */
+
+
+function set(element, svg) {
+
+  var parsed = parse(svg);
+
+  // clear element contents
+  clear(element);
+
+  if (!svg) {
+    return;
+  }
+
+  if (!isFragment(parsed)) {
+    // extract <svg> from parsed document
+    parsed = parsed.documentElement;
+  }
+
+  var nodes = slice(parsed.childNodes);
+
+  // import + append each node
+  for (var i = 0; i < nodes.length; i++) {
+    appendTo(nodes[i], element);
+  }
+
+}
+
+function get(element) {
+  var child = element.firstChild,
+      output = [];
+
+  while (child) {
+    serialize(child, output);
+    child = child.nextSibling;
+  }
+
+  return output.join('');
+}
+
+function isFragment(node) {
+  return node.nodeName === '#document-fragment';
+}
+
+function innerSVG(element, svg) {
+
+  if (svg !== undefined) {
+
+    try {
+      set(element, svg);
+    } catch (e) {
+      throw new Error('error parsing SVG: ' + e.message);
+    }
+
+    return element;
+  } else {
+    return get(element);
+  }
+}
+
+
+function slice(arr) {
+  return Array.prototype.slice.call(arr);
+}
+
+/**
+ * Selection utilities
+ */
+
+function select(node, selector) {
+  return node.querySelector(selector);
+}
+
+function selectAll(node, selector) {
+  var nodes = node.querySelectorAll(selector);
+
+  return [].map.call(nodes, function(element) {
+    return element;
+  });
+}
+
+/**
+ * prependTo utility
+ */
+
+/**
+ * Prepend a node to a target element and return the prepended node.
+ *
+ * @param  {SVGElement} node
+ * @param  {SVGElement} target
+ *
+ * @return {SVGElement} the prepended node
+ */
+function prependTo(node, target) {
+  return target.insertBefore(ensureImported(node, target), target.firstChild || null);
+}
+
+/**
+ * prepend utility
+ */
+
+/**
+ * Prepend a node to a target element
+ *
+ * @param  {SVGElement} target
+ * @param  {SVGElement} node
+ *
+ * @return {SVGElement} the target element
+ */
+function prepend(target, node) {
+  prependTo(node, target);
+  return target;
+}
+
+/**
+ * Replace utility
+ */
+
+function replace(element, replacement) {
+  element.parentNode.replaceChild(ensureImported(replacement, element), element);
+  return replacement;
+}
+
+/**
+ * transform accessor utility
+ */
+
+function wrapMatrix(transformList, transform) {
+  if (transform instanceof SVGMatrix) {
+    return transformList.createSVGTransformFromMatrix(transform);
+  }
+
+  return transform;
+}
+
+
+function setTransforms(transformList, transforms) {
+  var i, t;
+
+  transformList.clear();
+
+  for (i = 0; (t = transforms[i]); i++) {
+    transformList.appendItem(wrapMatrix(transformList, t));
+  }
+}
+
+/**
+ * Get or set the transforms on the given node.
+ *
+ * @param {SVGElement} node
+ * @param  {SVGTransform|SVGMatrix|Array<SVGTransform|SVGMatrix>} [transforms]
+ *
+ * @return {SVGTransform} the consolidated transform
+ */
+function transform(node, transforms) {
+  var transformList = node.transform.baseVal;
+
+  if (transforms) {
+
+    if (!Array.isArray(transforms)) {
+      transforms = [ transforms ];
+    }
+
+    setTransforms(transformList, transforms);
+  }
+
+  return transformList.consolidate();
+}
+
+
+
 
 /***/ }),
 
