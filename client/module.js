@@ -199,7 +199,7 @@ function positionEntry(element, axis, injector) {
 
     delta[ axis ] = value - getPosition(element)[ axis ];
 
-    modeling.moveShape(element, delta, target);
+    modeling.moveElements([ element ], delta, target);
   }
 
   function setMarker(element, marker) {
@@ -229,17 +229,21 @@ function positionEntry(element, axis, injector) {
   var $input = domQuery('.set-position-input', $html);
 
   $input.addEventListener('keydown', function(event) {
-    if (event.key !== 'Enter') {
-      return;
+    if (event.key === 'Enter') {
+      var value = parseInt(event.target.value);
+
+      if (isNaN(value)) {
+        return;
+      }
+  
+      setPosition(value);
     }
 
-    var value = parseInt(event.target.value);
+    if (event.key === 'Escape') {
+      clear();
 
-    if (isNaN(value)) {
-      return;
+      $input.blur();
     }
-
-    setPosition(value);
   });
 
   $input.addEventListener('input', function(event) {
@@ -295,7 +299,7 @@ function positionEntry(element, axis, injector) {
     target && removeMarkers(target);
 
     target = null;
-
+    
     $input.value = getPosition(element)[ axis ].toString();
   }
 
