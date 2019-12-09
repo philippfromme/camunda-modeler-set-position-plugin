@@ -10,9 +10,9 @@ This [Camunda Modeler Plugin](https://github.com/camunda/camunda-modeler) lets y
 
 ## Using the Plugin
 
-1. [Download ZIP](https://github.com/philippfromme/camunda-modeler-plugin-resize-tasks/archive/master.zip)
+1. [Download ZIP](https://github.com/philippfromme/camunda-modeler-set-position-plugin/archive/master.zip)
 2. Extract
-3. Move to [user data directory](https://github.com/camunda/camunda-modeler/tree/master/docs/search-paths#user-data-directory)
+3. Move to [app data directory](https://github.com/camunda/camunda-modeler/tree/master/docs/search-paths#app-data-directory) or [user data directory](https://github.com/camunda/camunda-modeler/tree/master/docs/search-paths#user-data-directory) (make sure to move the plugin, not its parent directory)
 4. Restart Camunda Modeler
 
 ## Building the Plugin
