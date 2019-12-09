@@ -8,7 +8,14 @@ This [Camunda Modeler Plugin](https://github.com/camunda/camunda-modeler) lets y
 
 > :warning: This plugin disables the [align-to-origin feature](https://github.com/bpmn-io/align-to-origin) since it would change element positions whenever you save.
 
-## Building
+## Using the Plugin
+
+1. [Download ZIP](https://github.com/philippfromme/camunda-modeler-plugin-resize-tasks/archive/master.zip)
+2. Extract
+3. Move to [user data directory](https://github.com/camunda/camunda-modeler/tree/master/docs/search-paths#user-data-directory)
+4. Restart Camunda Modeler
+
+## Building the Plugin
 
 Install dependencies:
 
@@ -20,9 +27,11 @@ Package plugin to `client/client-bundle.js`:
 
 ```sh
 npm run bundle
+```
 
-# or
+or
 
+```sh
 npm run bundle:watch
 ```
 
@@ -30,6 +39,6 @@ npm run bundle:watch
 
 * [Plugins documentation](https://github.com/camunda/camunda-modeler/tree/master/docs/plugins)
 
-## Licence
+# Licence
 
 MIT
